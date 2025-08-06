@@ -1,0 +1,443 @@
+<?xml version="1.0" ?>
+<robot name="mobile_robco" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+  <xacro:macro name="robco_xl" params="">
+
+    <!-- Arm Links -->
+    <link name="BD193_customer_v1_1">
+      <inertial>
+        <origin xyz="0.11086093890617746 -0.14999883865839964 -0.15049475459763317" rpy="0 0 0"/>
+        <mass value="0.01"/>
+        <inertia ixx="0.568297" iyy="0.80608" izz="0.810001" ixy="9e-06" iyz="-9.1e-05" ixz="-0.00257"/>
+      </inertial>
+      <visual>
+        <origin xyz="-0.080904 -0.151068 -0.934327" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://mobile_robco_description/meshes/arm/BD193_customer_v1_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="silver"/>
+      </visual>
+      <collision>
+        <origin xyz="-0.080904 -0.151068 -0.934327" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://mobile_robco_description/meshes/arm/BD193_customer_v1_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="C193_v1_1">
+      <inertial>
+        <origin xyz="0.015200084341211284 -3.680834741773796e-07 -2.793969402503649e-07" rpy="0 0 0"/>
+        <mass value="0.01"/>
+        <inertia ixx="0.020057" iyy="0.010324" izz="0.010197" ixy="0.0" iyz="-5.4e-05" ixz="0.0"/>
+      </inertial>
+      <visual>
+        <origin xyz="-0.337184 -0.001068 -0.784327" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://mobile_robco_description/meshes/arm/C193_v1_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="silver"/>
+      </visual>
+      <collision>
+        <origin xyz="-0.337184 -0.001068 -0.784327" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://mobile_robco_description/meshes/arm/C193_v1_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="D193_customer_v1_1">
+      <inertial>
+        <origin xyz="0.10298077716574155 -2.428876458104943e-07 0.015448294912491889" rpy="0 0 0"/>
+        <mass value="0.01"/>
+        <inertia ixx="0.539442" iyy="0.611028" izz="0.407083" ixy="2e-06" iyz="-8e-06" ixz="-0.005581"/>
+      </inertial>
+      <visual>
+        <origin xyz="-0.367584 -0.001068 -0.784327" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://mobile_robco_description/meshes/arm/D193_customer_v1_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="silver"/>
+      </visual>
+      <collision>
+        <origin xyz="-0.367584 -0.001068 -0.784327" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://mobile_robco_description/meshes/arm/D193_customer_v1_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="C193_v1__1__1">
+      <inertial>
+        <origin xyz="-4.3628065271583694e-08 -3.6808345936999685e-07 -0.01520015142763309" rpy="0 0 0"/>
+        <mass value="0.01"/>
+        <inertia ixx="0.010197" iyy="0.010324" izz="0.020057" ixy="5.4e-05" iyz="0.0" ixz="-0.0"/>
+      </inertial>
+      <visual>
+        <origin xyz="-0.487084 -0.001068 -0.681727" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://mobile_robco_description/meshes/arm/C193_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="silver"/>
+      </visual>
+      <collision>
+        <origin xyz="-0.487084 -0.001068 -0.681727" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://mobile_robco_description/meshes/arm/C193_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="L193_650_customer_v1_1">
+      <inertial>
+        <origin xyz="-1.6859656837286963e-08 0.2244674829954521 -0.08982077771376107" rpy="0 0 0"/>
+        <mass value="0.01"/>
+        <inertia ixx="3.380256" iyy="0.250245" izz="3.345006" ixy="-1e-06" iyz="0.136792" ixz="0.0"/>
+      </inertial>
+      <visual>
+        <origin xyz="-0.487084 -0.001068 -0.651327" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://mobile_robco_description/meshes/arm/L193_650_customer_v1_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="silver"/>
+      </visual>
+      <collision>
+        <origin xyz="-0.487084 -0.001068 -0.651327" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://mobile_robco_description/meshes/arm/L193_650_customer_v1_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="C148_v1__1__1">
+      <inertial>
+        <origin xyz="-4.362867545015803e-08 0.010000445052072982 -2.793975094617096e-07" rpy="0 0 0"/>
+        <mass value="0.01"/>
+        <inertia ixx="0.002085" iyy="0.004128" izz="0.002114" ixy="-0.0" iyz="-0.0" ixz="1.8e-05"/>
+      </inertial>
+      <visual>
+        <origin xyz="-0.487084 -0.640067 -0.551827" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://mobile_robco_description/meshes/arm/C148_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="silver"/>
+      </visual>
+      <collision>
+        <origin xyz="-0.487084 -0.640067 -0.551827" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://mobile_robco_description/meshes/arm/C148_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="D148_customer_v3_1">
+      <inertial>
+        <origin xyz="-1.3077764832170047e-07 0.08184841458206737 -0.00905243278253931" rpy="0 0 0"/>
+        <mass value="0.01"/>
+        <inertia ixx="0.12833" iyy="0.11191" izz="0.09299" ixy="0.0" iyz="0.000106" ixz="-0.0"/>
+      </inertial>
+      <visual>
+        <origin xyz="-0.487084 -0.660067 -0.551827" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://mobile_robco_description/meshes/arm/D148_customer_v3_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="silver"/>
+      </visual>
+      <collision>
+        <origin xyz="-0.487084 -0.660067 -0.551827" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://mobile_robco_description/meshes/arm/D148_customer_v3_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="C148_v1_1">
+      <inertial>
+        <origin xyz="-4.3628775647786e-08 -3.8908754351751895e-07 0.009999753129409816" rpy="0 0 0"/>
+        <mass value="0.01"/>
+        <inertia ixx="0.002085" iyy="0.002114" izz="0.004128" ixy="1.8e-05" iyz="0.0" ixz="0.0"/>
+      </inertial>
+      <visual>
+        <origin xyz="-0.487084 -0.753066 -0.625817" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://mobile_robco_description/meshes/arm/C148_v1_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="silver"/>
+      </visual>
+      <collision>
+        <origin xyz="-0.487084 -0.753066 -0.625817" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://mobile_robco_description/meshes/arm/C148_v1_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="D148_customer_v3__1__1">
+      <inertial>
+        <origin xyz="-0.00905219701372556 -4.76236378221806e-07 0.08184765760542778" rpy="0 0 0"/>
+        <mass value="0.01"/>
+        <inertia ixx="0.09299" iyy="0.12833" izz="0.11191" ixy="-0.0" iyz="0.0" ixz="0.000106"/>
+      </inertial>
+      <visual>
+        <origin xyz="-0.487084 -0.753066 -0.645817" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://mobile_robco_description/meshes/arm/D148_customer_v3__1__1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="silver"/>
+      </visual>
+      <collision>
+        <origin xyz="-0.487084 -0.753066 -0.645817" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://mobile_robco_description/meshes/arm/D148_customer_v3__1__1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="C148_v1__2__1">
+      <inertial>
+        <origin xyz="0.009999923844242087 -3.890873916390092e-07 -1.4606422626961546e-07" rpy="0 0 0"/>
+        <mass value="0.01"/>
+        <inertia ixx="0.004128" iyy="0.002085" izz="0.002114" ixy="0.0" iyz="-1.8e-05" ixz="0.0"/>
+      </inertial>
+      <visual>
+        <origin xyz="-0.561074 -0.753066 -0.738815" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://mobile_robco_description/meshes/arm/C148_v1__2__1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="silver"/>
+      </visual>
+      <collision>
+        <origin xyz="-0.561074 -0.753066 -0.738815" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://mobile_robco_description/meshes/arm/C148_v1__2__1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="I148-600_customer_v1_1">
+      <inertial>
+        <origin xyz="0.26278201696322756 -5.503622635405492e-07 -9.307806403402452e-08" rpy="0 0 0"/>
+        <mass value="0.01"/>
+        <inertia ixx="0.0292" iyy="0.931257" izz="0.931257" ixy="-1e-06" iyz="-0.0" ixz="0.0"/>
+      </inertial>
+      <visual>
+        <origin xyz="-0.581074 -0.753066 -0.738815" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://mobile_robco_description/meshes/arm/I148_600_customer_v1_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="silver"/>
+      </visual>
+      <collision>
+        <origin xyz="-0.581074 -0.753066 -0.738815" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://mobile_robco_description/meshes/arm/I148_600_customer_v1_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="C116_v1_1">
+      <inertial>
+        <origin xyz="0.008999964542216965 -3.890870051703743e-07 -1.4606425124963351e-07" rpy="0 0 0"/>
+        <mass value="0.01"/>
+        <inertia ixx="0.001452" iyy="0.000725" izz="0.000758" ixy="-0.0" iyz="-8e-06" ixz="-0.0"/>
+      </inertial>
+      <visual>
+        <origin xyz="-1.160574 -0.753066 -0.738815" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://mobile_robco_description/meshes/arm/C116_v1_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="silver"/>
+      </visual>
+      <collision>
+        <origin xyz="-1.160574 -0.753066 -0.738815" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://mobile_robco_description/meshes/arm/C116_v1_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="D116_customer_v1_1">
+      <inertial>
+        <origin xyz="0.06352197108840985 -3.933336560901779e-07 -0.012655163639839428" rpy="0 0 0"/>
+        <mass value="0.01"/>
+        <inertia ixx="0.043278" iyy="0.048321" izz="0.029984" ixy="-0.0" iyz="-0.0" ixz="-5e-05"/>
+      </inertial>
+      <visual>
+        <origin xyz="-1.178574 -0.753066 -0.738815" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://mobile_robco_description/meshes/arm/D116_customer_v1_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="silver"/>
+      </visual>
+      <collision>
+        <origin xyz="-1.178574 -0.753066 -0.738815" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://mobile_robco_description/meshes/arm/D116_customer_v1_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="C116_v1__1__1">
+      <inertial>
+        <origin xyz="-4.362886030229163e-08 -3.890868733869013e-07 0.008999845764856462" rpy="0 0 0"/>
+        <mass value="0.01"/>
+        <inertia ixx="0.000758" iyy="0.000725" izz="0.001452" ixy="-8e-06" iyz="0.0" ixz="0.0"/>
+      </inertial>
+      <visual>
+        <origin xyz="-1.250574 -0.753066 -0.799015" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://mobile_robco_description/meshes/arm/C116_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="silver"/>
+      </visual>
+      <collision>
+        <origin xyz="-1.250574 -0.753066 -0.799015" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://mobile_robco_description/meshes/arm/C116_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <!-- <link name="D116_customer_v1_2">
+      <inertial>
+        <origin xyz="0.012654973946999215 -3.9333350099202136e-07 0.06352186865286802" rpy="0 0 0"/>
+        <mass value="0.01"/>
+        <inertia ixx="0.029984" iyy="0.048321" izz="0.043278" ixy="0.0" iyz="-0.0" ixz="5e-05"/>
+      </inertial>
+      <visual>
+        <origin xyz="-1.250574 -0.753066 -0.817015" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://mobile_robco_description/meshes/arm/D116_customer_v1_2.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="silver"/>
+      </visual>
+      <collision>
+        <origin xyz="-1.250574 -0.753066 -0.817015" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://mobile_robco_description/meshes/arm/D116_customer_v1_2.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link> -->
+
+    <link name="D116_customer_v1_2">
+      <inertial>
+        <origin xyz="-0.00045617739445845016 -0.015625352365130993 0.06600157891356076" rpy="0 0 0"/>
+        <mass value="0.01"/>
+        <inertia ixx="0.044431" iyy="0.029421" izz="0.03944" ixy="-0.000438" iyz="0.000334" ixz="1.3e-05"/>
+      </inertial>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://mobile_robco_description/meshes/arm/base_link.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="silver"/>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://mobile_robco_description/meshes/arm/base_link.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <!-- Joints -->
+    <joint name="Rigid_5" type="fixed">
+      <origin xyz="0.25628 -0.15 -0.15" rpy="0 0 0"/>
+      <parent link="BD193_customer_v1_1"/>
+      <child link="C193_v1_1"/>
+    </joint>
+
+    <joint name="robco_joint_0" type="revolute">
+      <origin xyz="0.0304 0.0 0.0" rpy="1.57 0 0"/>
+      <parent link="C193_v1_1"/>
+      <child link="D193_customer_v1_1"/>
+      <axis xyz="1.0 0.0 0.0"/>
+      <limit lower="${default_lower}" upper="${default_upper}" effort="1000" velocity="${default_velocity}" acceleration="${default_acceleration}"/>
+    </joint>
+
+    <joint name="Rigid_7" type="fixed">
+      <origin xyz="0.1195 0.0 -0.1026" rpy="0 0 0"/>
+      <parent link="D193_customer_v1_1"/>
+      <child link="C193_v1__1__1"/>
+    </joint>
+
+    <joint name="robco_joint_1" type="revolute">
+      <origin xyz="0.0 0.0 -0.0304" rpy="0 0 -1.5708"/>
+      <parent link="C193_v1__1__1"/>
+      <child link="L193_650_customer_v1_1"/>
+      <axis xyz="0.0 -0.0 -1.0"/>
+      <limit lower="${default_lower}" upper="${default_upper}" effort="1000" velocity="${default_velocity}" acceleration="${default_acceleration}"/>
+    </joint>
+
+    <joint name="Rigid_9" type="fixed">
+      <origin xyz="0.0 0.638999 -0.0995" rpy="0 0 0"/>
+      <parent link="L193_650_customer_v1_1"/>
+      <child link="C148_v1__1__1"/>
+    </joint>
+
+    <joint name="Rigid_10" type="fixed">
+      <origin xyz="0.0 0.02 0.0" rpy="0 0 0"/>
+      <parent link="C148_v1__1__1"/>
+      <child link="D148_customer_v3_1"/>
+      <axis xyz="-0.0 1.0 -0.0"/>
+      <!-- <limit lower="-3.14159" upper="3.14159" effort="1000" velocity="1.0" acceleration="2.0"/> -->
+    </joint>
+
+    <joint name="Rigid_11" type="fixed">
+      <origin xyz="0.0 0.092999 0.07399" rpy="0 0 0"/>
+      <parent link="D148_customer_v3_1"/>
+      <child link="C148_v1_1"/>
+    </joint>
+
+    <joint name="robco_joint_2" type="revolute">
+      <origin xyz="0.0 0.0 0.02" rpy="0 0 1.5708"/>
+      <parent link="C148_v1_1"/>
+      <child link="D148_customer_v3__1__1"/>
+      <axis xyz="-0.0 0.0 1.0"/>
+      <limit lower="${default_lower}" upper="${default_upper}" effort="1000" velocity="${default_velocity}" acceleration="${default_acceleration}"/>
+    </joint>
+
+    <joint name="Rigid_13" type="fixed">
+      <origin xyz="0.07399 0.0 0.092998" rpy="0 0 0"/>
+      <parent link="D148_customer_v3__1__1"/>
+      <child link="C148_v1__2__1"/>
+    </joint>
+
+    <joint name="robco_joint_3" type="revolute">
+      <origin xyz="0.02 0.0 0.0" rpy="0 0 0"/>
+      <parent link="C148_v1__2__1"/>
+      <child link="I148-600_customer_v1_1"/>
+      <axis xyz="1.0 0.0 0.0"/>
+      <limit lower="${default_lower}" upper="${default_upper}" effort="1000" velocity="${default_velocity}" acceleration="${default_acceleration}"/>
+    </joint>
+
+    <joint name="Rigid_15" type="fixed">
+      <origin xyz="0.5795 0.0 0.0" rpy="0 0 0"/>
+      <parent link="I148-600_customer_v1_1"/>
+      <child link="C116_v1_1"/>
+    </joint>
+
+    <joint name="Rigid_16" type="fixed">
+      <origin xyz="0.018 0.0 0.0" rpy="0 0 0"/>
+      <parent link="C116_v1_1"/>
+      <child link="D116_customer_v1_1"/>
+    </joint>
+
+    <joint name="robco_joint_4" type="revolute">
+      <origin xyz="0.072 0.0 0.0602" rpy="0 0 1.5708"/>
+      <parent link="D116_customer_v1_1"/>
+      <child link="C116_v1__1__1"/>
+      <axis xyz="-0.0 0.0 1.0"/>
+      <limit lower="${default_lower}" upper="${default_upper}" effort="1000" velocity="${default_velocity}" acceleration="${default_acceleration}"/>
+    </joint>
+
+    <joint name="Rigid_20" type="fixed">
+      <origin xyz="0.0 0.0 0.018" rpy="0 0 3.14159265359"/>
+      <parent link="C116_v1__1__1"/>
+      <child link="D116_customer_v1_2"/>
+    </joint>
+
+  </xacro:macro>
+
+  <!-- Invoke the Arm Macro -->
+  <xacro:robco_xl/>
+</robot>

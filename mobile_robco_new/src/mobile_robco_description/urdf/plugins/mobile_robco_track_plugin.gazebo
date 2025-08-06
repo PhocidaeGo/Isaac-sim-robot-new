@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<robot name="mobile_robco" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+    <gazebo>
+        <plugin name="gz::sim::systems::TrackedVehicle" filename="gz-sim-tracked-vehicle-system">
+            <left_track><link>track1_1</link></left_track>
+            <right_track><link>track1_2</link></right_track>
+            <tracks_separation>0.555</tracks_separation>
+            <tracks_height>0.18094</tracks_height>
+            <steering_efficiency>1.0</steering_efficiency>
+            <!-- <debug>1</debug> -->
+        </plugin>
+        <plugin name='gz::sim::systems::TrackController' filename='libgz-sim-track-controller-system.so'>
+            <link>track1_2</link>
+            <min_velocity>-1.0</min_velocity>
+            <max_velocity>1.0</max_velocity>
+            <!-- <debug>1</debug> -->
+        </plugin>
+        <plugin name='gz::sim::systems::TrackController' filename='libgz-sim-track-controller-system.so'>
+            <link>track1_1</link>
+            <min_velocity>-1.0</min_velocity>
+            <max_velocity>1.0</max_velocity>
+        </plugin>
+    </gazebo>
+</robot>

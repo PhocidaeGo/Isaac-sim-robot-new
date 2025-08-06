@@ -1,0 +1,13 @@
+**/.thumbs/
+zed/
+*.svo2
+*.onnx
+*.blend
+*.blend1
+build/
+install/
+log/
+sdg/
+yolo/dataset/
+yolo/runs/
+isaac_sim_file/

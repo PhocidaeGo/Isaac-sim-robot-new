@@ -1,0 +1,51 @@
+<?xml version="1.0" ?>
+<robot name="Komponente219" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:macro name="end_effector" params="">
+    <link name="lanze">
+      <inertial>
+        <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+        <mass value="0.7246394223310322"/>
+        <inertia ixx="0.001157" iyy="0.001395" izz="0.000899" ixy="7e-06" iyz="-0.000147" ixz="-4e-06"/>
+      </inertial>
+      <visual>
+        <origin xyz="0.010351 0.265582  -0.184381" rpy="1.5708 0 0"/>
+        <geometry>
+          <mesh filename="package://mobile_robco_description/meshes/end_effector/lanze.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="silver"/>
+      </visual>
+      <visual>
+        <origin xyz="0 0.015 0" rpy="1.5708 0 0"/>
+        <geometry>
+          <cylinder radius="0.06" length="0.03"/>
+        </geometry>
+        <material name="silver"/>
+      </visual>
+      <collision>
+        <origin xyz="0.010351 0.265582  -0.184381" rpy="1.5708 0 0"/>
+        <geometry>
+          <mesh filename="package://mobile_robco_description/meshes/end_effector/lanze.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+      <collision>
+        <origin xyz="0 0.015 0" rpy="1.5708 0 0"/>
+        <geometry>
+          <cylinder radius="0.06" length="0.03"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <!-- Tool0 frame (essential for end effector kinematics) -->
+    <link name="tool0">
+    </link>
+
+    <joint name="lanze-tool0" type="fixed">
+      <origin xyz="-0.4767 0.1006 -0.0094" rpy="0 -1.5708 0"/>
+      <parent link="lanze"/>
+      <child link="tool0"/>
+    </joint>
+
+  </xacro:macro>
+  <!-- Invoke the End Effector Macro -->
+  <xacro:end_effector/>
+</robot>

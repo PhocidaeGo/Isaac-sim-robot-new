@@ -1,0 +1,12 @@
+<launch>
+
+  <node pkg="loam_interface" exec="loamInterface" name="loamInterface" output="screen">
+    <param name="stateEstimationTopic" value="/zed/zed_node/odom_map" />
+    <param name="registeredScanTopic" value="/zed/zed_node/point_cloud/cloud_registered_map" />
+    <param name="flipStateEstimation" value="false" />
+    <param name="flipRegisteredScan" value="false" />
+    <param name="sendTF" value="true" />
+    <param name="reverseTF" value="false" />
+  </node>
+
+</launch>

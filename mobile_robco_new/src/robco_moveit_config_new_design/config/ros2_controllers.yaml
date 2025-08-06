@@ -1,0 +1,27 @@
+# This config file is used by ros2_control
+controller_manager:
+  ros__parameters:
+    update_rate: 100  # Hz
+
+    arm_slider_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+arm_slider_controller:
+  ros__parameters:
+    joints:
+      - Slider_18
+      - robco_joint_0
+      - robco_joint_1
+      - robco_joint_2
+      - robco_joint_3
+      - robco_joint_4
+      - robco_joint_5
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+      - velocity

@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<robot name="mobile_robco" xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <!-- Define Default Joint Limits -->
+  <xacro:property name="default_lower" value="-4.71239"/>
+  <xacro:property name="default_upper" value="4.71239"/>
+  <xacro:property name="default_velocity" value="0.5"/>
+  <xacro:property name="default_acceleration" value="0.05"/>
+
+  <!-- Include Shared Xacro Files -->
+  <xacro:include filename="$(find mobile_robco_description)/urdf/shared/materials.xacro" />
+  <xacro:include filename="$(find mobile_robco_description)/urdf/shared/mobile_robco.trans" />
+  <xacro:include filename="$(find mobile_robco_description)/urdf/shared/mobile_robco.gazebo" />
+
+  <!-- Include Modular Components -->
+  <xacro:include filename="$(find mobile_robco_description)/urdf/base/base.xacro" />
+  <xacro:include filename="$(find mobile_robco_description)/urdf/arm/robco_xl.xacro" />
+  <xacro:include filename="$(find mobile_robco_description)/urdf/end_effector/end_effector.xacro" />
+
+  <!-- Include Plugins -->
+  <xacro:include filename="$(find mobile_robco_description)/urdf/plugins/mobile_robco_track_plugin.gazebo" />
+  <xacro:include filename="$(find mobile_robco_description)/urdf/plugins/mobile_robco.ros2_control.xacro" />
+
+  <!-- Joint Connecting Basis and Arm -->
+  <joint name="Rigid_19" type="fixed">
+    <origin xyz="0.893568 -0.12648 0.409927" rpy="1.5708 0 0"/>
+    <parent link="Komponente21_v1_1"/>
+    <child link="BD193_customer_v1_1"/>
+  </joint>
+
+  <!-- Joint Connecting Arm and End Effector -->
+  <joint name="robco_joint_5" type="revolute">
+    <origin xyz="0.001757 0.060174 0.0748" rpy="0 0 0"/>
+    <parent link="D116_customer_v1_2"/>
+    <child link="lanze"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="${default_lower}" upper="${default_upper}" effort="1000" velocity="${default_velocity}" acceleration="${default_acceleration}"/>
+  </joint>
+
+</robot>

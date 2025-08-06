@@ -1,0 +1,25 @@
+moveit_setup_assistant_config:
+  urdf:
+    package: mobile_robco_description
+    relative_path: urdf/mobile_robco.xacro
+  srdf:
+    relative_path: config/mobile_robco.srdf
+  package_settings:
+    author_name: yuanyan
+    author_email: yuanyan.li@tum.de
+    generated_timestamp: 1754405489
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity
+  modified_urdf:
+    xacros:
+      - control_xacro
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity

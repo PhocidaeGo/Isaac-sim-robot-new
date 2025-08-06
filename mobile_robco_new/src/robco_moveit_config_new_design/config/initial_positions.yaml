@@ -1,0 +1,10 @@
+# Default initial positions for mobile_robco's ros2_control fake system
+
+initial_positions:
+  Slider_18: 0
+  robco_joint_0: 0
+  robco_joint_1: 0
+  robco_joint_2: 0
+  robco_joint_3: 0
+  robco_joint_4: 0
+  robco_joint_5: 0
