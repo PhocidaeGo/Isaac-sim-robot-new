@@ -5,7 +5,7 @@ from geometry_msgs.msg import TwistStamped, Twist
 class TwistConverter(Node):
     def __init__(self):
         super().__init__('twist_converter')
-        self.publisher_ = self.create_publisher(Twist, '/cmd_vel', 10)
+        self.publisher_ = self.create_publisher(Twist, '/cmd_vel_aede', 10)
         self.subscription = self.create_subscription(
             TwistStamped,
             '/cmd_vel_stamped',
