@@ -170,6 +170,8 @@ ros2 launch zed_wrapper zed_camera.launch.py camera_model:=zedx sim_mode:=true
 ```
 ## 3. Launch AEDE
 ```bash
+export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
+export ROS_DOMAIN_ID=0
 source install/setup.bash
 ros2 launch launch/aede_isaac.launch.py
 ```
